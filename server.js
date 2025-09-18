@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const { CONSUMER_KEY, CONSUMER_SECRET } = process.env;
-
+//takes the consumer key and secret from the .env file and encodes them in base64
 async function getAccessToken() {
   const auth = Buffer.from(`${CONSUMER_KEY}:${CONSUMER_SECRET}`).toString("base64");
 
